@@ -64,7 +64,7 @@ aska-quotation-auto-save/
 
 | フェーズ   | 内容 |
 |---------  |------|
-| ✅ Step 1 | Git初期化・構成設計・README作成 |
+| ✅ Step 1 | Git初期化・構成設計・README作成・config.py作成 |
 ※2025/07/11 完了
 
 | 🚧 Step 2 | Excel情報取得モジュール（load_excel_data.py）実装 |
