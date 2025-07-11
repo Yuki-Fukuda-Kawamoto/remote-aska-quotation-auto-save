@@ -1,0 +1,1 @@
+#!/usr/bin/env python3\n\nif __name__ == '__main__':\n    print('Hello from main!')\n

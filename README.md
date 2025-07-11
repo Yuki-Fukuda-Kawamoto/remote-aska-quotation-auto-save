@@ -1,0 +1,1 @@
+# New Git Project\n\nThis project was initialized with a Python script.

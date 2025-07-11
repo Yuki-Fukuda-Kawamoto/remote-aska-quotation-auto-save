@@ -1,0 +1,19 @@
+# ========================
+# Git Ignore for sales_entry_from_orders
+# ========================
+
+# 💾 Pythonキャッシュ
+__pycache__/
+*.py[cod]
+
+# 🗂️ 一時ファイル
+temp_file/*
+!temp_file/.gitkeep
+
+# 🧾 ログファイル
+logs/*.log
+!logs/.gitkeep
+
+# 📝 OS生成ファイル
+.DS_Store
+Thumbs.db
