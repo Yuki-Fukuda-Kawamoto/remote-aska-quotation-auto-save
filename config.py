@@ -22,7 +22,7 @@ logging.basicConfig(
 )
 
 # 📜 ログメッセージ出力
-logging.info("処理を開始しました")
+logging.info("🚀 処理を開始しました")
 
 # 💾 提出用フォルダの親ディレクトリ
 SUBMISSION_ROOT = Path(
