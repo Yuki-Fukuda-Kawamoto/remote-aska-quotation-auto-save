@@ -68,10 +68,24 @@ aska-quotation-auto-save/
 ※2025/07/11 完了
 
 | 🚧 Step 2 | Excel情報取得モジュール（load_excel_data.py）実装 |
+関数：extract_excel_info()
+機能：開いているかつファイル名が「EXCEL_FILE_NAME = "ASKA101P11.xlsm"（config.pyで設定）」から情報を読み取る
+引数：なし
+戻り値：
+return {
+        "quotation_no": quotation_no,
+        "quotation_project": quotation_project,
+        "quotation_customer": quotation_customer,
+        "customer_text": customer_text
+    }
+
 ※2025/07/11 完了
 
 
 | 🔜 Step 3 | フォルダ名生成ロジック（make_folder_name.py） |
+
+
+
 | 🔜 Step 4 | 保存・コピー処理（save_excel_to_folder.py / clipboard_util.py） |
 | 🔜 Step 5 | `main.py` 統合・ログ出力対応・例外処理追加 |
 | ⏳ Step 6 | テスト用Excel準備・動作検証・業務反映 |

@@ -25,7 +25,7 @@ logging.basicConfig(
 logging.info("🚀 処理を開始しました")
 
 # 💾 提出用フォルダの親ディレクトリ
-SUBMISSION_ROOT = Path(
+QUOTATION_BASE_DIR = Path(
     r"C:\Users\2012003\OneDrive - 株式会社川本製作所\2012003_福田\01_営業\10_見積もり\01_提出見積もり")
 
 
