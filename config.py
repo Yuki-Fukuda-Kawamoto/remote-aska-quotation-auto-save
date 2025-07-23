@@ -11,6 +11,10 @@ from pathlib import Path
 logs_dir = Path("./logs")
 logs_dir.mkdir(exist_ok=True)
 
+# 🔧 ログフォーマット定義（他モジュールで再利用可）
+LOGGING_FORMAT = "%Y-%m-%d %H:%M:%S [%(levelname)s] %(message)s"
+
+
 # 🪵 ログ初期設定（コンソール ＋ ファイル）
 logging.basicConfig(
     level=logging.INFO,
@@ -22,7 +26,7 @@ logging.basicConfig(
 )
 
 # 📜 ログメッセージ出力
-logging.info("🚀 処理を開始しました")
+logging.info("🚀 処理を開始しました@config.py")
 
 # 💾 提出用フォルダの親ディレクトリ
 QUOTATION_BASE_DIR = Path(

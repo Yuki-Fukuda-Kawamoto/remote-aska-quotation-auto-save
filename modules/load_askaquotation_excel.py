@@ -4,7 +4,10 @@ import xlwings as xw
 import logging
 from tabulate import tabulate
 
-def extract_excel_info() -> dict:
+def extract_excel_info(EXCEL_FILE_NAME: str) -> dict:
+    # 📜 ログメッセージ出力
+    logging.info("🚀 処理を開始しました@load_askaquotation_excel.py")
+
     logging.info("🧲 Excelファイルに接続中...")
 
     try:
@@ -52,7 +55,7 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 
     from pprint import pprint
-    result = extract_excel_info()
+    result = extract_excel_info(EXCEL_FILE_NAME)
 
     # 絵文字付きラベルに変換
     display_data = {

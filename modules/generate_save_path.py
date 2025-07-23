@@ -21,7 +21,16 @@ from datetime import datetime
 from pathlib import Path
 
 # 📁 フォルダ名を生成
-def generate_folder_name(quotation_no: str, customer_text: str, project_name: str) -> str:
+def generate_folder_name(
+        DATE_FORMAT: str,
+        quotation_no: str, 
+        customer_text: str, 
+        project_name: str,
+        MAX_PROJECT_NAME_LENGTH: str) -> str:
+    
+    # 📜 ログメッセージ出力
+    logging.info("🚀 処理を開始しました@generate_save_path.py")
+
     logging.info("📁 フォルダ名を生成中...")
     date_str = datetime.now().strftime(DATE_FORMAT)
 
@@ -45,7 +54,7 @@ def generate_file_name(quotation_no: str) -> str:
     return file_name
 
 # 📂 フル保存パスを生成
-def generate_full_path(folder_name: str, file_name: str) -> Path:
+def generate_full_path(QUOTATION_BASE_DIR: Path, folder_name: str, file_name: str) -> Path:
     logging.info("📂 保存先パスを生成中...")
     full_path = QUOTATION_BASE_DIR / folder_name / file_name
     logging.info(f"✅ 保存パス生成完了: {full_path}")
@@ -55,12 +64,14 @@ def generate_full_path(folder_name: str, file_name: str) -> Path:
 def make_save_path(info: dict) -> dict:
     logging.info("🧲 保存パス情報一式を生成します")
     folder_name = generate_folder_name(
-        quotation_no=info["quotation_no"],
-        customer_text=info["customer_text"],
-        project_name=info["quotation_project"]
+        DATE_FORMAT = info["DATE_FORMAT"],
+        quotation_no = info["quotation_no"],
+        customer_text = info["customer_text"],
+        project_name = info["quotation_project"],
+        MAX_PROJECT_NAME_LENGTH = info["MAX_PROJECT_NAME_LENGTH"]
     )
     file_name = generate_file_name(info["quotation_no"])
-    full_path = generate_full_path(folder_name, file_name)
+    full_path = generate_full_path(info["QUOTATION_BASE_DIR"], folder_name, file_name)
 
     return {
         "folder_name": folder_name,
